@@ -12,21 +12,11 @@ if (a <= 99)
 }
 else
 {
-    if (a >= 1000)
+    while (a >= 1000)
     {
-        while (a >= 1000)
-        {
-            a = a / 10;     // Я не поняла, почему программа ругается если я пишу тут int a. Объясниете, пожалуйста.
-        }
-        int b = a % 10;
-        Console.Write("Третья цифра: ");
-        Console.WriteLine(b);
+        a = a / 10;     // Я не поняла, почему программа ругается если я пишу тут int a. Объясниете, пожалуйста.
     }
-    else
-    {
-        int b = a % 10;
-        Console.Write("Третья цифра: ");
-        Console.WriteLine(b);
-    }
-
+    int b = a % 10;
+    Console.Write("Третья цифра: ");
+    Console.WriteLine(b);
 }
