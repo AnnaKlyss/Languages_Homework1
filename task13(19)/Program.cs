@@ -3,3 +3,15 @@
 // 14212 -> нет
 // 12821 -> да
 // 23432 -> да
+
+Console.Write("Введите пятизначное число: ");
+string str = Console.ReadLine();
+
+if (str[0] == str [4] && str[1] == str[3])
+{
+    Console.WriteLine("Число " + str + " является палиндромом");
+}
+else
+{
+    Console.WriteLine("Число " + str + " не является палиндромом");
+}
