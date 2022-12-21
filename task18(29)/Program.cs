@@ -3,19 +3,19 @@
 // 6, 1, 33 -> [6, 1, 33]
 
 int[] array = new int[8];
-for (int i = 0; i < 8; i++) 
+for (int i = 0; i < 8; i++)
 {
-    array[i] = new Random().Next(-10, 11);  
+    array[i] = new Random().Next(-10, 11);
 }
 for (int i = 0; i < array.Length; i++)
 {
-if (i == array.Length - 1)
-{
-Console.Write(array[i] + ".");
-}
-else
-{
-Console.Write(array[i] + ", ");
-}
+    if (i == array.Length - 1)
+    {
+        Console.Write(array[i] + ".");
+    }
+    else
+    {
+        Console.Write(array[i] + ", ");
+    }
 }
 
