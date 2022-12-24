@@ -6,13 +6,13 @@ double[] array = new double[10];
 
 for (int i = 0; i < array.Length; i++)
 {
-    double randomNumber = new Random().Next(-100, 101);
-    array[i] = randomNumber;
+    double randomNumber = new Random().Next(-100, 101) + new Random().NextDouble(); // добавили дробное NextDouble генерирует от 0 до 1
+    array[i] = Math.Round(randomNumber, 2);  // округление до сотых
 }
 
 for (int i = 0; i < array.Length; i++)
 {
-    Console.Write(array[i] + " ");
+    Console.WriteLine(array[i] + " ");
 }
 Console.WriteLine();
 
