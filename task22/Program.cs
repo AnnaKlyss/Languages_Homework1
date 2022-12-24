@@ -3,29 +3,43 @@
 // [1 2 3 4 5] -> 5 8 3
 // [6 7 3 6] -> 36 21
 
-int[] array = new int[10];
-
-for (int i = 0; i < array.Length; i++)
+void FillArray(int[] collection)
 {
-    int randomNumber = new Random().Next(-10, 11);
-    array[i] = randomNumber;
+    int length = collection.Length;
+    int index = 0;
+    while (index < length)
+    {
+        collection[index] = new Random().Next(-9, 9);
+        index++;
+    }
 }
 
-for (int i = 0; i < array.Length; i++)
+void PrintArray(int[] coll)
 {
-    Console.Write(array[i] + " ");
+    int count = coll.Length;
+    int pos = 0;
+    while (pos < count)
+    {
+        Console.Write(coll[pos] + " ");
+        pos++;
+    }
+
 }
-Console.WriteLine();
+int[] array = new int[9];
+FillArray(array);
+PrintArray(array);
+Console.WriteLine(" ");
+
 
 int newArrayLength = 1;
 
-if (array.Length % 2 == 0)
+if (array.Length%2 == 0)
 {
-   newArrayLength = array.Length/2;
+   newArrayLength = (array.Length/2);
 }
 else
 {
-    newArrayLength = array.Length/2 + 1;
+    newArrayLength = (array.Length/2 + 1);
 }
 
 int[] newArray = new int[newArrayLength];
@@ -34,15 +48,12 @@ for (int i = 0; i < array.Length/2; i++)
 {
     newArray[i] = array[i] * array[array.Length-1-i];
 
-    if (array.Length % 2 == 0)
-    {
-        Console.Write(" ");
-    }
-    else
-    {
-        newArray[newArrayLength-1] = array[array.Length/2 + 1];
-    }
     Console.Write(newArray[i] + " ");
 }
+if (array.Length%2 != 0)
+    {
+        newArray[newArrayLength-1] = array[array.Length/2];
+        Console.Write(newArray[newArrayLength-1]);
+    }
 
 Console.WriteLine();
