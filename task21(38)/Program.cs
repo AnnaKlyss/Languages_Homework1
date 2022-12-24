@@ -22,15 +22,15 @@ double maxPosition = 0;
 for (int i = 0; i < array.Length; i++)
 {
     if (minPosition > array[i])
-        {
-           minPosition = array[i];
-        }
+    {
+        minPosition = array[i];
+    }
     if (maxPosition < array[i])
-        {
-           maxPosition = array[i];
-        }
+    {
+        maxPosition = array[i];
+    }
 }
-Console.WriteLine("Минимальное число " +  minPosition + " максимальное  число " + maxPosition);
+Console.WriteLine("Минимальное число " + minPosition + " максимальное  число " + maxPosition);
 
-Console.WriteLine("Разница между максимальным и минимальным элементами массива " + (maxPosition-minPosition));
+Console.WriteLine("Разница между максимальным и минимальным элементами массива " + (maxPosition - minPosition));
 
