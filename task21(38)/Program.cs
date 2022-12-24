@@ -16,8 +16,8 @@ for (int i = 0; i < array.Length; i++)
 }
 Console.WriteLine();
 
-double minPosition = 0;
-double maxPosition = 0;
+double minPosition = array[0];
+double maxPosition = array[0];
 
 for (int i = 0; i < array.Length; i++)
 {
