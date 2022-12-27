@@ -57,7 +57,7 @@ for (int i = 0; i < matrix.GetLength(0); i++)
 }
 Console.WriteLine();
 
-if (isNumberInMatrix = true)
+if (isNumberInMatrix)
 {
     Console.WriteLine($"Число {number} есть в массиве");
 }
