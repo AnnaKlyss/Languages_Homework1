@@ -31,22 +31,6 @@ for (int i = 0; i < array.GetLength(0); i++)
         double randomNumber = new Random().Next(-9, 10) + new Random().NextDouble();
         array[i, j] = Math.Round(randomNumber, 1);
     }
-
 }
-
 Console.WriteLine();
 PrintArray(array);
-
-// for (int i = 0; i < matrix.GetLength(0); i++)
-// {
-//     for (int j = 0; j < matrix.GetLength(1); j++)
-//     {
-//         if (i % 2 == 0 && j % 2 == 0)
-//         {
-//             double x = Math.Pow(matrix[i, j], 2); // получение квадрата с типом данных dobule
-//             matrix[i, j] = Convert.ToInt32(x); // изменение типа данных с double на int
-//         }
-//     }
-// }
-// Console.WriteLine();
-// PrintArray(matrix);
