@@ -36,17 +36,17 @@ void SelectionSort(int[,] matr)
 {
     for (int i = 0; i < matr.GetLength(0); i++)
     {
-        for (int j = 0; j < matr.GetLength(1) - 1; j++)
+        for (int j = 0; j <  matr.GetLength(1)-1; j++)
         {
             int maxPosition = j;
-            for (int k = j + 1; k < matr.GetLength(1); k++)
+            for (int k = j+1 ; k < matr.GetLength(1); k++)
             {
-                if (matr[i, k] > matr[i, maxPosition]) maxPosition = k;
+               if (matr[i,k] > matr[i,maxPosition]) maxPosition = k;
             }
-            int temporary = matr[i, j];
-            matr[i, j] = matr[i, maxPosition];
-            matr[i, maxPosition] = temporary;
-        }
+            int temporary = matr[i,j];
+            matr[i,j] = matr[i,maxPosition];
+            matr[i,maxPosition] = temporary;
+          }    
     }
 }
 
