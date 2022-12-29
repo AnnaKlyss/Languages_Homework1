@@ -20,7 +20,6 @@ for (int i = 0; i < array3d.GetLength(0); i++)
     }
 }
 
-
 for (int i = 0; i < array3d.GetLength(0); i++)
 {
     for (int j = 0; j < array3d.GetLength(1); j++)

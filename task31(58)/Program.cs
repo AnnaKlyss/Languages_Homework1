@@ -42,14 +42,13 @@ FillArray(matrix2);
 PrintArray(matrix2);
 Console.WriteLine();
 
-
 int[,] resultMatrix = new int[2, 2];
 
 for (int i = 0; i < resultMatrix.GetLength(0); i++)
 {
     for (int j = 0; j < resultMatrix.GetLength(1); j++)
     {
-        resultMatrix[i, j] = matrix1[i,j] * matrix2[i, j];
+        resultMatrix[i, j] = matrix1[i, j] * matrix2[i, j];
     }
 }
 PrintArray(resultMatrix);
