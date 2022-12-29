@@ -28,6 +28,15 @@ void PrintArray(int[,] matr)
         Console.WriteLine();
     }
 }
+int SumLineElements(int[,] matr, int i)
+{
+    int sumLine = matr[i, 0];
+    for (int j = 1; j < matr.GetLength(1); j++)
+    {
+        sumLine += matr[i, j];
+    }
+    return sumLine;
+}
 
 Console.WriteLine("Введите количество строк: ");
 int lines = int.Parse(Console.ReadLine());
@@ -39,21 +48,22 @@ int[,] matrix = new int[lines, columns];
 FillArray(matrix);
 Console.WriteLine();
 PrintArray(matrix);
-Console.WriteLine();
 
-int sumLine = 0;
-
-for (int i = 0; i < matrix.GetLength(0); i++)
+int minSumLine = 0;
+int sumLine = SumLineElements(matrix, 0);
+for (int i = 1; i < matrix.GetLength(0); i++)
 {
-    for (int j = 0; j < matrix.GetLength(1); j++)
+    int tempSumLine = SumLineElements(matrix, i);
+    if (sumLine > tempSumLine)
     {
-        sumLine = sumLine + matrix[i, j];
+        sumLine = tempSumLine;
+        minSumLine = i;
     }
-    Console.WriteLine($" сумма элементов строки i = {i} равна {sumLine}");
-    sumLine = 0;
-    
-
 }
 
-Console.WriteLine();
+Console.WriteLine($"\n{minSumLine + 1} - строкa с наименьшей суммой ({sumLine}) элементов ");
+
+
+
+
 
