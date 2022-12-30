@@ -31,7 +31,6 @@ void PrintArray(int[,] matr)
         Console.WriteLine();
     }
 }
-
 void SelectionSort(int[,] matr)
 {
     for (int i = 0; i < matr.GetLength(0); i++)
